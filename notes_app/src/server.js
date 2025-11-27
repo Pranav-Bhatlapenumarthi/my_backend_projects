@@ -25,6 +25,10 @@ const PORT = process.env.port || 8484;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+app.get("/", (req, res) => {
+    res.send(`Server running succesfully on port ${PORT}`);
+});
 */
 
 connectDB().then(() => {
