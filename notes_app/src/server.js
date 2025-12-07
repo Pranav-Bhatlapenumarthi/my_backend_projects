@@ -12,12 +12,12 @@ dotenv.config();
 app.use(cors());
 app.use(express.json());
 
-// // routes
-// app.use("/api/auth", authRoutes);
-// app.use("/api/notes", notesRoutes);
+// routes
+app.use("/api/auth", authRoutes);
+app.use("/api/notes", notesRoutes);
 
-// // error handler
-// app.use(errorHandler);
+// error handler
+app.use(errorHandler);
 
 const PORT = process.env.port || 8484;
 
@@ -38,6 +38,6 @@ connectDB().then(() => {
     process.exit(1);
 })
 
-app.get("/test-db", (req, res) => {
-  res.send("DB connection test route");
-});
+// app.get("/test-db", (req, res) => {
+//   res.send("DB connection test route");
+// });
