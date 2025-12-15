@@ -1,4 +1,3 @@
-const { model, get } = require("mongoose");
 const Note = require("../models/noteModel");
 
 const createNote = async (req, res, next) =>{
