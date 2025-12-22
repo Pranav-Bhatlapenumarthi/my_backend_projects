@@ -24,6 +24,7 @@ const register = async (req, res, next) =>{
     } catch(err){
         next(err);
     }
+};
 
     const login = async (req, res, next) => {
         try{
@@ -55,5 +56,5 @@ const register = async (req, res, next) =>{
         }
     }
 
-    module.exports = {register, login};
-};
+    // console.log(register,login);
+    module.exports = { register, login };
